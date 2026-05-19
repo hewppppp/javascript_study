@@ -95,10 +95,33 @@ else {
 }
 
 let rows = Number(prompt("Enter number of rows"))
+for(let i = 1 ; i <=rows ; i++){
+    let row = ''
+    for(let j = 1;j <=i; j++){
+        row +='*'
+    }
+}
+console.log(row)
 
-for (let i = 1; i <= rows; i++) {
-    console.log("*".repeat(i))
-}let prods = [
+let speed = Number(prompt('Enter speed:'))
+
+let speed_limit = 70
+
+if(speed <= speed_limit){
+    console.log('OK')
+}else{
+    let speed_exceeded = speed - speed_limit
+
+    let points = Math.ceil(speed_exceeded/5)
+
+    if (points > 12){
+        console.log('license suspended')
+    }else{
+        console.log('points ---:', points)
+    }
+}
+
+let prods = [
     ['omo', '30kshs', '300'],
     ['milk', '50kshs', '200'],
     ['bread', '45kshs', '359'],
